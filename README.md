@@ -17,3 +17,9 @@ amplxe-cl -collect hotspots -knob sampling-mode=hw -knob enable-stack-collection
 II ) General Exploration : 
  
 amplxe-cl -collect uarch-exploration  -knob collect-memory-bandwidth=true -knob enable-stack-collection=true -knob sampling-interval=1 -analyze-system -finalization-mode=full --duration 100 -result-dir /opt/ajith/20190604_043733/h264_enc_rate_1_sess_20
+
+If you want to skip descriptions of detected performance issues in the report,
+enter: amplxe-cl -report summary -report-knob show-issues=false -r
+<my_result_dir>. Alternatively, you may view the report in the csv format:
+amplxe-cl -report <report_name> -format=csv.
+amplxe: Executing actions 100 % done
