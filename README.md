@@ -4,14 +4,24 @@ I ) Hotspots :
 
 ### I) System wide :
 
-amplxe-cl -collect hotspots -knob sampling-mode=hw -knob enable-stack-collection=true --duration unlimited <br>
+#### HotStop Analysis
+
+amplxe-cl -collect hotspots -knob sampling-mode=hw -knob enable-stack-collection=true --duration unlimited -result-dir <path-to-result-dir> <br>
  
-amplxe-cl -collect hotspots -knob enable-stack-collection=true -analyze-system -finalization-mode=full --duration unlimited
+amplxe-cl -collect hotspots -knob enable-stack-collection=true -analyze-system -finalization-mode=full --duration unlimited \
+-result-dir <path-to-result-dir>
  
 #### To RUN VTune Benchmarking for 100sec SystemWide :
 
-amplxe-cl -collect hotspots -knob enable-stack-collection=true -analyze-system -finalization-mode=full --duration 100 
+amplxe-cl -collect hotspots -knob enable-stack-collection=true -analyze-system -finalization-mode=full --duration 100 \
+-result-dir <path-to-result-dir>
  
+ #### General Exploration : 
+ 
+amplxe-cl -collect uarch-exploration  -knob collect-memory-bandwidth=true -knob \
+enable-stack-collection=true -knob sampling-interval=1 -analyze-system -finalization-mode=full --duration 100 \
+-result-dir <path-to-result-dir>
+
  ### II) Application wide : 
  
  #### Windows 
@@ -23,10 +33,6 @@ amplxe-cl -collect hotspots -knob sampling-mode=hw -knob enable-stack-collection
 amplxe-cl -collect hotspots -knob sampling-mode=hw -knob enable-stack-collection=true -analyze-system -finalization-mode=full ./RUN_Application.sh
 
 This RUN_Applications can contain such line -> "python3 resnet_inference.py"
-
-### III ) General Exploration : 
- 
-amplxe-cl -collect uarch-exploration  -knob collect-memory-bandwidth=true -knob enable-stack-collection=true -knob sampling-interval=1 -analyze-system -finalization-mode=full --duration 100 -result-dir /opt/ajith/20190604_043733/h264_enc_rate_1_sess_20
 
 If you want to skip descriptions of detected performance issues in the report,
 enter: amplxe-cl -report summary -report-knob show-issues=false -r
