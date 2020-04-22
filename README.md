@@ -32,7 +32,7 @@ This RUN_Applications can contain such line -> "python3 resnet_inference.py"
 
 amplxe-cl -collect hotspots -knob sampling-mode=hw -knob enable-stack-collection=true -analyze-system -finalization-mode=full -app-working-dir C:\Users\asirra\AppData\Local\Programs\Python\Python35 -- C:\Users\asirra\AppData\Local\Programs\Python\Python35\python.exe C:\Users\asirra\Desktop\MayBeImp\resnet_inference.py
 
- #### General Exploration : 
+ ### General Exploration : 
  
 amplxe-cl -collect uarch-exploration  -knob collect-memory-bandwidth=true -knob \
 enable-stack-collection=true -knob sampling-interval=1 -analyze-system -finalization-mode=full --duration 100 \
