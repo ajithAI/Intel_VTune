@@ -8,11 +8,17 @@ amplxe-cl -collect hotspots -knob sampling-mode=hw -knob enable-stack-collection
  
 amplxe-cl -collect hotspots -knob enable-stack-collection=true -analyze-system -finalization-mode=full --duration unlimited
  
+To RUN VTune Benchmarking for 100sec SystemWide : 
+
+amplxe-cl -collect hotspots -knob enable-stack-collection=true -analyze-system -finalization-mode=full --duration 100 
+ 
  Application wide : 
 
 amplxe-cl -collect hotspots -knob sampling-mode=hw -knob enable-stack-collection=true -analyze-system -finalization-mode=full -app-working-dir C:\Users\asirra\AppData\Local\Programs\Python\Python35 -- C:\Users\asirra\AppData\Local\Programs\Python\Python35\python.exe C:\Users\asirra\Desktop\MayBeImp\resnet_inference.py
 
+amplxe-cl -collect hotspots -knob sampling-mode=hw -knob enable-stack-collection=true -analyze-system -finalization-mode=full ./RUN_Application.sh
 
+This RUN_Applications can contain such line -> "python3 resnet_inference.py"
 
 II ) General Exploration : 
  
