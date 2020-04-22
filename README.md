@@ -9,7 +9,7 @@
 ### I) System wide :
 ```bash
 amplxe-cl -collect hotspots -knob sampling-mode=hw -knob enable-stack-collection=true --duration unlimited \
--result-dir < path-to-result-dir > <br>
+-result-dir < path-to-result-dir > 
  ```
  ```bash
 amplxe-cl -collect hotspots -knob enable-stack-collection=true -analyze-system -finalization-mode=full \
