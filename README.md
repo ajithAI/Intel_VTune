@@ -2,7 +2,7 @@
 Useful commands for VTune
 I ) Hotspots :
 
-System wide : 
+*System wide : *
 
 amplxe-cl -collect hotspots -knob sampling-mode=hw -knob enable-stack-collection=true --duration unlimited <br>
  
