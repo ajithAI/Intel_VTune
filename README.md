@@ -4,11 +4,9 @@
 
 ( First Source VTUNE amplxe-cl.sh ) 
 
-I ) Hotspots :
+### I ) Hotspots :
 
-### I) System wide :
-
-#### HotStop Analysis
+### System wide :
 
 amplxe-cl -collect hotspots -knob sampling-mode=hw -knob enable-stack-collection=true --duration unlimited \
 -result-dir < path-to-result-dir > <br>
