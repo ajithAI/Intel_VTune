@@ -13,8 +13,12 @@ amplxe-cl -collect hotspots -knob enable-stack-collection=true -analyze-system -
 amplxe-cl -collect hotspots -knob enable-stack-collection=true -analyze-system -finalization-mode=full --duration 100 
  
  ### II) Application wide : 
+ 
+ #### Windows 
 
 amplxe-cl -collect hotspots -knob sampling-mode=hw -knob enable-stack-collection=true -analyze-system -finalization-mode=full -app-working-dir C:\Users\asirra\AppData\Local\Programs\Python\Python35 -- C:\Users\asirra\AppData\Local\Programs\Python\Python35\python.exe C:\Users\asirra\Desktop\MayBeImp\resnet_inference.py
+
+#### Linux 
 
 amplxe-cl -collect hotspots -knob sampling-mode=hw -knob enable-stack-collection=true -analyze-system -finalization-mode=full ./RUN_Application.sh
 
