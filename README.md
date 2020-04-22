@@ -6,7 +6,8 @@ I ) Hotspots :
 
 #### HotStop Analysis
 
-amplxe-cl -collect hotspots -knob sampling-mode=hw -knob enable-stack-collection=true --duration unlimited -result-dir path-to-result-dir <br>
+amplxe-cl -collect hotspots -knob sampling-mode=hw -knob enable-stack-collection=true --duration unlimited \
+-result-dir < path-to-result-dir <br>
  
 amplxe-cl -collect hotspots -knob enable-stack-collection=true -analyze-system -finalization-mode=full --duration unlimited \
 -result-dir path-to-result-dir
