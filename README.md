@@ -2,6 +2,8 @@
 
 ## Useful commands for VTune
 
+## Download : wget http://registrationcenter-download.intel.com/akdlm/irc_nas/tec/13682/vtune_amplifier_2018_update4.tar.gz 
+
 ( First Source VTUNE amplxe-cl.sh ) 
 
 ### Hotspots :
