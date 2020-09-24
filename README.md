@@ -12,17 +12,14 @@ Download : wget http://registrationcenter-download.intel.com/akdlm/irc_nas/tec/1
 
 ### I) System wide :
 ```bash
-amplxe-cl -collect hotspots -knob sampling-mode=hw -knob enable-stack-collection=true --duration unlimited \
--result-dir < path-to-result-dir > 
+amplxe-cl -collect hotspots -knob sampling-mode=hw -knob enable-stack-collection=true --duration unlimited -result-dir < path-to-result-dir > 
  ```
  ```bash
-amplxe-cl -collect hotspots -knob enable-stack-collection=true -analyze-system -finalization-mode=full \
---duration unlimited -result-dir < path-to-result-dir >
+amplxe-cl -collect hotspots -knob enable-stack-collection=true -analyze-system -finalization-mode=full --duration unlimited -result-dir < path-to-result-dir >
  ```
 #### To RUN VTune Benchmarking for 100sec SystemWide :
 ```bash
-amplxe-cl -collect hotspots -knob enable-stack-collection=true -analyze-system -finalization-mode=full \ 
---duration 100 -result-dir < path-to-result-dir >
+amplxe-cl -collect hotspots -knob enable-stack-collection=true -analyze-system -finalization-mode=full --duration 100 -result-dir < path-to-result-dir >
  ```
 
  ### II) Application wide : 
